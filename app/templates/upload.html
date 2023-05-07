@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Chat with your data</h1>
+    <div class="chat-container">
+        <!-- Chat messages will be added here by JavaScript -->
+    </div>
+    <form action="/chat" method="post" id="chat-form" class="chat-input">
+        <input type="text" id="chat-input" name="user_input" placeholder="Type your message..." autocomplete="off" required>
+        <button type="submit">Send</button>
+        <button type="button" id="clear-chat">Clear Chat</button>
+    </form>
+
+
+{% endblock %}

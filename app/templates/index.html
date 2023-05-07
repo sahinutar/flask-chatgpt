@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>OpenAI Playground Chatbot</h1>
+    <div class="chat-container">
+        <!-- Chat messages will be added here by JavaScript -->
+    </div>
+    <form action="/chat" method="post" id="chat-form" class="chat-input">
+        <input type="text" id="chat-input" name="user_input" placeholder="Type your message..." autocomplete="off" required>
+        <button type="submit">Send</button>
+        <button type="button" id="clear-chat">Clear Chat</button>
+    </form>
+    <form action="/uploader" method="post" enctype="multipart/form-data" class="chat-input">
+        <input type="file" name="file" accept=".pdf" required>
+        <button type="submit" class="file-sumbit">Upload</button>
+    </form>
+
+{% endblock %}
